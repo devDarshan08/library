@@ -1,0 +1,33 @@
+<div class="main-logout" *ngIf="islogout">
+    <div class="logout">
+        <h2 style="color: red;">Logout!</h2>
+            <div>
+                <p>Are You Sure?</p>
+            </div>
+        <div class="btn-main mt-3">
+            <button type="button" id="btnsubmit" class="btn btn-success" (click)="logout()">Yes</button>
+            <button type="button" id="btnsubmit" class="btn btn-danger" (click)="activemodel.close()">No</button>
+        </div>
+        
+    </div>
+</div>
+
+<div class="main-library" *ngIf="isedite">
+    <h2>Edit Book</h2>
+        <div class="input-contorl mt-3">
+            <label class="form-label">Book Name:</label>
+            <input type="text" name="Libraryname" id="libraryname" [(ngModel)]="this.sharedService.books[this.i].name" class="form-control" maxlength="50"
+                placeholder="enter your libraryname" required>
+            <div id="libraryname_error" class="error"></div>
+        </div>
+        <div class="input-contorl mt-3">
+            <label class="form-label">Bookauthor Name:</label>
+            <input type="text" name="Libraryname" id="libraryname" [(ngModel)]="this.sharedService.books[this.i].authorname" class="form-control" maxlength="50"
+                placeholder="enter your libraryname" required>
+            <div id="libraryname_error" class="error"></div>
+        </div>
+    <div class="btn-main mt-3">
+        <button type="button" id="btnsubmit" class="btn btn-success" (click)="edit()">Submit</button>
+        <button type="button" id="btnclose" class="btn btn-danger" (click)="activemodel.close()">Close</button>
+    </div>
+</div>

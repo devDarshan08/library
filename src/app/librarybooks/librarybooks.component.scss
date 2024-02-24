@@ -1,0 +1,66 @@
+.librarybook-main {
+    margin-top: 70px;
+    z-index: 0;
+}
+
+img {
+    width: 250px;
+    height: 150px;
+}
+
+
+
+.no-data{
+    color: red;
+    font-weight: 600;
+    font-size: large;
+    margin: 20px;
+}
+
+.main-box {
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0px 1px 7px rgb(123, 123, 123);
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.rowset {
+    flex-wrap: wrap;
+}
+
+.books-name {
+    padding: 5px;
+    text-align: start;
+    font-size: large;
+    font-weight: 600;
+}
+
+.booksauthor-name {
+    padding: 0px 5px;
+    text-align: start;
+}
+
+.btn {
+    margin: 3px;
+    padding: 3px 10px;
+}
+
+.main-btn {
+    text-align: end;
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+    img {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .rowset {
+        justify-content: center;
+    }
+}

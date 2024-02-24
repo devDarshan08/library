@@ -1,0 +1,22 @@
+<div class="main-login ">
+    <div class="login">
+        <h2 style="text-align: center;">Login</h2>
+        <div class="input-contorl mt-3">
+            <label class="form-label">Username:</label>
+            <input type="text" name="Username" id="username" class="form-control" [(ngModel)]="login.username"
+                maxlength="50" placeholder="enter your username" required>
+            <div id="username_error" class="error"></div>
+        </div>
+        <div class="input-contorl mt-3">
+            <label class="form-label">Password:</label>
+            <input type="password" name="Password" id="password" class="form-control" [(ngModel)]="login.password"
+                maxlength="15" placeholder="enter your password" required>
+        </div>
+        <div class="btn-main mt-3">
+            <button type="submit" id="btnsubmit" class="btn btn-success" (click)="loginsubmit()">Submit</button>
+        </div>
+        <div style="text-align: center;">
+            don't have any account?<a routerLink="/registration">singup now</a>
+        </div>
+    </div>
+</div>

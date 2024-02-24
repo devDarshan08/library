@@ -1,0 +1,35 @@
+<div class="main-library" *ngIf="!isbook">
+    <h2>Create Library</h2>
+        <div class="input-contorl mt-3">
+            <label class="form-label">Library Name:</label>
+            <input type="text" name="Libraryname" id="libraryname" [(ngModel)]="library.name" class="form-control" maxlength="50"
+                placeholder="enter your libraryname" required>
+            <div id="libraryname_error" class="error"></div>
+        </div>
+    <div class="btn-main mt-3">
+        <button type="button" id="btnsubmit" class="btn btn-success" (click)="createlibrary()">Submit</button>
+        <button type="button" id="btnclose" class="btn btn-danger" (click)="activemodel.close()">Close</button>
+    </div>
+</div>
+
+
+
+<div class="main-library" *ngIf="isbook">
+    <h2>Add Book</h2>
+        <div class="input-contorl mt-3">
+            <label class="form-label">Book Name:</label>
+            <input type="text" name="Libraryname" id="libraryname" [(ngModel)]="Book.name" class="form-control" maxlength="50"
+                placeholder="enter your libraryname" required>
+            <div id="libraryname_error" class="error"></div>
+        </div>
+        <div class="input-contorl mt-3">
+            <label class="form-label">Bookauthor Name:</label>
+            <input type="text" name="Libraryname" id="libraryname" [(ngModel)]="Book.authorname" class="form-control" maxlength="50"
+                placeholder="enter your libraryname" required>
+            <div id="libraryname_error" class="error"></div>
+        </div>
+    <div class="btn-main mt-3">
+        <button type="button" id="btnsubmit" class="btn btn-success" (click)="createbook()">Add</button>
+        <button type="button" id="btnclose" class="btn btn-danger" (click)="activemodel.close()">Close</button>
+    </div>
+</div>

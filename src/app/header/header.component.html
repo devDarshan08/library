@@ -1,0 +1,24 @@
+<div class="header-main">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid col-sm-12">
+            <div class="sidebaricon" style="overflow: auto;">
+                <button  *ngIf="sharedService?.loggeddata" class="btn" (click)="sharedService.sidebar = !sharedService.sidebar">
+                    &#9776;
+                </button>
+            </div>
+            <div class="notification" *ngIf="sharedService?.loggeddata;" routerLink="message">
+                <div class="noti-num">
+                    <div class="num">
+                        {{sharedService.count}}
+                    </div>
+                </div>
+                <img style="width: 40px; border-radius: 50%;"
+                    src="https://i.pinimg.com/736x/bc/9b/20/bc9b206f94a8a0421bc32b3c0b17811e.jpg" alt="">
+            </div>
+            <div class=" d-flex" *ngIf="!sharedService?.loggeddata">
+                <button class="btn" type="button" routerLink="login">Login</button>
+                <button class="btn" type="button" routerLink="registration">Sing Up</button>
+            </div>
+        </div>
+    </nav>
+</div>

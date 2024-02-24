@@ -1,0 +1,29 @@
+<div class="main-rent" *ngIf="isrent">
+    <h2>Rent</h2>
+    <div class="input-contorl mt-3">
+        <label class="form-label">Date:</label>
+        <input type="datetime-local" id="date" class="form-control" [(ngModel)]="Date" [min]="minDate" required>
+        <div id="username_error" class="error"></div>
+    </div>
+
+    <div class="btn-main mt-3">
+        <button type="button" id="btnsubmit" class="btn btn-success" (click)="rent()">Submit</button>
+        <button type="button" id="btnclose" class="btn btn-danger" (click)="activemodel.close()">Close</button>
+    </div>
+</div>
+
+
+<div class="main-addto" *ngIf="!isrent">
+    <h2>Add To Library</h2>
+    <div class="input-contorl mt-3">
+        <label class="form-label">Select Library:</label>
+        <select name="select" id="select" class="form-select" (change)="select($event)">
+            <option>select library</option>
+            <option *ngFor="let item of sharedService?.loggeddata?.library let i = index" value={{i}}>{{item.name}}</option>
+        </select>
+    </div>
+
+    <div class="btn-main mt-3">
+        <button type="button" id="btnsubmit" class="btn btn-success" (click)="addto()">Submit</button>
+    </div>
+</div>

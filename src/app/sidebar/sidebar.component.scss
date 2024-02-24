@@ -1,0 +1,88 @@
+.sidebar {
+    margin-top: 60px;
+    background-color: rgb(246, 246, 246);
+    width: 253px;
+    position: fixed;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    box-shadow: 0px 3px 6px rgb(123, 123, 123);
+    padding:12px 12px;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-main{
+   padding: 15px 5px;
+   text-align: center;
+}
+
+.profile{
+    background-color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: auto;
+    box-shadow: 0px 5px 10px rgb(123, 123, 123);
+}
+
+.profilename{
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.userdetails{
+    border-bottom:1px solid black ;
+}
+
+.profileemail{
+    text-align: center;
+    font-weight: 400;
+}
+
+.Logoutbtn{
+    margin-top: 10px;
+}
+
+.btnlogout{
+    margin-top: 10px;
+    font-size: 20px; 
+    border: none;
+    color: red;
+    font-weight: 500;
+    background: transparent !important;
+}
+
+.btnlogout:hover{
+    color: rgb(142, 4, 4);
+}
+
+.librarydetails{
+    text-align: left;
+    padding: 10px;
+    
+}
+
+.link-main{
+    width: 100%;
+}
+
+.sidebarlink{
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    cursor: pointer;
+}
+
+.sidebarlink:hover{
+    color: rgb(122, 185, 248);
+}
